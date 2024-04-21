@@ -13,5 +13,5 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
-require("remap")
-require("lazy_init")
+require("config.lazy_init")
+require("config.remap")
