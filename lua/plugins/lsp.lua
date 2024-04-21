@@ -19,7 +19,6 @@ return {
 				"bashls",
 				"black",
 				"dockerls",
-				"markdownlint",
 				"pyright",
 				"yamlls",
 			}
