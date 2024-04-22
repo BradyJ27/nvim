@@ -1,7 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Trouble Keymaps
@@ -18,3 +14,5 @@ pcall(require('telescope').load_extension, 'ui-select')
 local builtin = require "telescope.builtin"
 vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+
+-- vim.keymap.set('n', '<leader>mp', vim.cmd("MarkdownPreview"), { desc = '[M]arkdown [P]review' })

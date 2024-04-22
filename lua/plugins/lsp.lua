@@ -1,30 +1,15 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
-		"williamboman/mason.nvim",
+		{ "williamboman/mason.nvim", config = true },
 		"williamboman/mason-lspconfig.nvim",
-		"folke/neodev.nvim",
-		"rcarriga/nvim-dap-ui",	
-		"nvim-neotest/nvim-nio",
-		"mfussenegger/nvim-dap",
-		"mfussenegger/nvim-lint",
-		"mhartington/formatter.nvim",
 	},
 
 	config = function()
 		require("mason").setup()
-		require("mason-lspconfig").setup({
-			ensure_installed = {
-				"lua_ls",
-				"bashls",
-				"black",
-				"dockerls",
-				"pyright",
-				"yamlls",
-			}
-		})
-		require("neodev").setup({
-			library = { plugins = { "nvim-dap-ui" }, types = true },
-		})
+		require("mason-lspconfig").setup {
+			ensure_installed = { "lua_ls", "pyright" },
+		}
+		require("lspconfig").lua_ls.setup {}
 	end
 }
