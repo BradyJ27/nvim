@@ -17,6 +17,8 @@ vim.opt.updatetime = 250
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
 require("config.lazy_init")
 require("config.remap")
